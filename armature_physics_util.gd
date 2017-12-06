@@ -1,6 +1,6 @@
 static func get_skeleton_bone_names(p_skeleton):
 	var names = ""
-	if(p_skeleton and p_skeleton extends Skeleton):
+	if(p_skeleton and p_skeleton is Skeleton):
 		for i in range(0, p_skeleton.get_bone_count()):
 			if(i > 0):
 				names += ","

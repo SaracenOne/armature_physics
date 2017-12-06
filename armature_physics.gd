@@ -31,14 +31,14 @@ func cache_child_node(p_node):
 					attached_body_ids[child] = bone_id
 				else:
 					rigid_controller_body_ids[child] = bone_id
-		elif child extends Joint:
+		elif child is Joint:
 			joints.append(child)
 		cache_child_node(child)
 	
 func cache_physics():
 	attached_body_ids = {}
 	rigid_controller_body_ids = {}
-	if skeleton != null and skeleton extends Skeleton:
+	if skeleton != null and skeleton is Skeleton:
 		cache_child_node(self)
 		
 func transform_global_position(p_transform):
